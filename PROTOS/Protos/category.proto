@@ -1,0 +1,34 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcService";
+
+package category;
+
+// The greeting service definition.
+service CategoryService {
+  // Get all categories
+  rpc GetAllCategories (Empty) returns (CategoryList);
+  // get category by id
+  rpc GetCategoryById(GetCategoryByIdRequest) returns (CategoryItem);
+  //add category
+  rpc AddCategory(addCategory) returns (CategoryItem);
+}
+
+message CategoryItem {
+    int32 id = 1;
+    string name = 2;
+}
+
+message CategoryList {
+    repeated CategoryItem categories = 1;
+}
+
+message Empty {}
+
+message GetCategoryByIdRequest{
+    int32 id = 1;
+}
+
+message addCategory{
+    string name = 1;
+}
