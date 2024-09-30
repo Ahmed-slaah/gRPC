@@ -1,1 +1,27 @@
 .vs/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.dll
+*.exe
+*.pdb
+*.app
+*.so
+*.dylib
+*.log
+*.suo
+*.user
+*.userosscache
+*.rsuser
+*.sln.docstates
+
+# Build Results
+# Ignore all bin and obj folders recursively for all projects
+**/bin/
+**/obj/
+
+# Ignore specific build configurations
+**/bin/Debug/
+**/bin/Release/
+**/bin/Debug/net*/  # Ignore all .NET versions (e.g., net8.0, net7.0, etc.)
+**/bin/Release/net*/  # Ignore all .NET versions (e.g., net8.0, net7.0, etc.)
